@@ -1,6 +1,3 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import path from "node:path";
-
 import { siteConfig } from "../../site-content";
 
 type ContactPayload = {
@@ -16,21 +13,34 @@ type ContactInquiry = ContactPayload & {
   id: string;
   reference: string;
   submittedAt: string;
-  notification: InquiryNotification;
 };
 
-const storageDirectory = path.join(process.cwd(), "data");
-const storagePath = path.join(storageDirectory, "contact-submissions.json");
+type DeliveryConfig =
+  | {
+      ready: true;
+      apiKey: string;
+      fromEmail: string;
+      toEmail: string;
+    }
+  | {
+      ready: false;
+      message: string;
+    };
+
+type DeliveryResult =
+  | {
+      ok: true;
+      emailId?: string;
+    }
+  | {
+      ok: false;
+      status: number;
+      message: string;
+      reason?: string;
+    };
+
 const resendEndpoint = "https://api.resend.com/emails";
 const inquiryUserAgent = "creative-softwares-contact/1.0";
-
-type InquiryNotification = {
-  provider: "resend" | "none";
-  status: "pending" | "skipped" | "sent" | "failed";
-  updatedAt: string;
-  emailId?: string;
-  reason?: string;
-};
 
 function sanitizeValue(value: unknown, maxLength: number) {
   return typeof value === "string"
@@ -135,34 +145,24 @@ function buildInquiryEmailHtml(inquiry: ContactInquiry) {
   `;
 }
 
-async function readExistingSubmissions() {
-  try {
-    const file = await readFile(storagePath, "utf8");
-    const parsed = JSON.parse(file);
+function getDeliveryConfig(): DeliveryConfig {
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  const fromEmail = process.env.CONTACT_FROM_EMAIL?.trim();
+  const toEmail = process.env.CONTACT_TO_EMAIL?.trim() || siteConfig.email;
 
-    return Array.isArray(parsed) ? (parsed as ContactInquiry[]) : [];
-  } catch {
-    return [] as ContactInquiry[];
+  if (!apiKey || !fromEmail) {
+    return {
+      ready: false,
+      message: `Email delivery is not configured yet. Please contact us directly at ${siteConfig.email}.`,
+    };
   }
-}
 
-async function writeSubmissions(submissions: ContactInquiry[]) {
-  await mkdir(storageDirectory, { recursive: true });
-  await writeFile(storagePath, JSON.stringify(submissions, null, 2), "utf8");
-}
-
-async function saveInquiry(inquiry: ContactInquiry) {
-  const submissions = await readExistingSubmissions();
-  submissions.push(inquiry);
-  await writeSubmissions(submissions);
-}
-
-async function updateInquiry(inquiry: ContactInquiry) {
-  const submissions = await readExistingSubmissions();
-  const nextSubmissions = submissions.map((entry) =>
-    entry.id === inquiry.id ? inquiry : entry
-  );
-  await writeSubmissions(nextSubmissions);
+  return {
+    ready: true,
+    apiKey,
+    fromEmail,
+    toEmail,
+  };
 }
 
 async function parseResponseBody(response: Response) {
@@ -200,17 +200,15 @@ function getErrorMessage(
 
 async function sendInquiryNotification(
   inquiry: ContactInquiry
-): Promise<InquiryNotification> {
-  const apiKey = process.env.RESEND_API_KEY?.trim();
-  const fromEmail = process.env.CONTACT_FROM_EMAIL?.trim();
-  const toEmail = process.env.CONTACT_TO_EMAIL?.trim() || siteConfig.email;
+): Promise<DeliveryResult> {
+  const config = getDeliveryConfig();
 
-  if (!apiKey || !fromEmail) {
+  if (!config.ready) {
     return {
-      provider: "none",
-      status: "skipped",
-      updatedAt: new Date().toISOString(),
-      reason: "Email delivery is not configured yet.",
+      ok: false,
+      status: 503,
+      message: config.message,
+      reason: "missing-email-configuration",
     };
   }
 
@@ -218,14 +216,15 @@ async function sendInquiryNotification(
     const response = await fetch(resendEndpoint, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${config.apiKey}`,
         "Content-Type": "application/json",
         "User-Agent": inquiryUserAgent,
         "Idempotency-Key": inquiry.id,
       },
       body: JSON.stringify({
-        from: fromEmail,
-        to: [toEmail],
+        from: config.fromEmail,
+        to: [config.toEmail],
+        reply_to: inquiry.email,
         subject: `New project inquiry ${inquiry.reference}`,
         html: buildInquiryEmailHtml(inquiry),
         text: buildInquiryEmailText(inquiry),
@@ -243,9 +242,12 @@ async function sendInquiryNotification(
 
     if (!response.ok) {
       return {
-        provider: "resend",
-        status: "failed",
-        updatedAt: new Date().toISOString(),
+        ok: false,
+        status: response.status === 429 ? 429 : 502,
+        message:
+          response.status === 429
+            ? "Too many inquiries were sent just now. Please wait a moment and try again."
+            : `We could not send your inquiry right now. Please try again or email us directly at ${siteConfig.email}.`,
         reason: getErrorMessage(
           body,
           "Unable to deliver the inquiry email notification."
@@ -254,16 +256,14 @@ async function sendInquiryNotification(
     }
 
     return {
-      provider: "resend",
-      status: "sent",
-      updatedAt: new Date().toISOString(),
+      ok: true,
       emailId: typeof body?.id === "string" ? body.id : undefined,
     };
   } catch (error) {
     return {
-      provider: "resend",
-      status: "failed",
-      updatedAt: new Date().toISOString(),
+      ok: false,
+      status: 502,
+      message: `We could not send your inquiry right now. Please try again or email us directly at ${siteConfig.email}.`,
       reason:
         error instanceof Error
           ? error.message
@@ -318,51 +318,31 @@ export async function POST(request: Request) {
     budget,
     projectType,
     details,
-    notification: {
-      provider: "none",
-      status: "pending",
-      updatedAt: new Date().toISOString(),
-    },
   };
 
-  try {
-    // Save first so the inquiry is retained even if email delivery fails.
-    await saveInquiry(inquiry);
-  } catch {
-    return Response.json(
-      { message: "Unable to save your inquiry right now. Please try again." },
-      { status: 500 }
-    );
-  }
+  const delivery = await sendInquiryNotification(inquiry);
 
-  const notification = await sendInquiryNotification(inquiry);
-  const finalInquiry = { ...inquiry, notification };
-
-  try {
-    await updateInquiry(finalInquiry);
-  } catch (error) {
-    console.error("Unable to update inquiry notification status", error);
-  }
-
-  if (notification.status === "failed") {
+  if (!delivery.ok) {
     console.error(
-      `Inquiry ${inquiry.reference} saved but email notification failed: ${notification.reason}`
+      `Inquiry ${inquiry.reference} failed to send: ${delivery.reason ?? delivery.message}`
+    );
+
+    return Response.json(
+      {
+        message: delivery.message,
+        deliveryReason: delivery.reason ?? null,
+      },
+      { status: delivery.status }
     );
   }
-
-  const responseMessage =
-    notification.status === "sent"
-      ? "Your inquiry has been sent successfully. We'll get back to you soon."
-      : notification.status === "failed"
-        ? "Your inquiry was saved, but email delivery failed right now. Please also contact us directly at creativesoftwares96@gmail.com."
-        : "Your inquiry was saved successfully. Inbox email is not configured yet, so no Gmail notification was sent.";
 
   return Response.json(
     {
-      message: responseMessage,
+      message: "Your inquiry has been sent successfully. We'll get back to you soon.",
       reference: inquiry.reference,
-      deliveryStatus: notification.status,
-      deliveryReason: notification.reason ?? null,
+      deliveryStatus: "sent",
+      deliveryReason: null,
+      emailId: delivery.emailId ?? null,
     },
     { status: 201 }
   );
