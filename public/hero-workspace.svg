@@ -1,0 +1,162 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF7F3"/>
+      <stop offset="0.48" stop-color="#F7F1EB"/>
+      <stop offset="1" stop-color="#F0E6DD"/>
+    </linearGradient>
+    <linearGradient id="windowGlow" x1="0" y1="0" x2="0" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#E8DDD2" stop-opacity="0.32"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="800" y1="520" x2="800" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4ECE5"/>
+      <stop offset="1" stop-color="#D9CEC5"/>
+    </linearGradient>
+    <linearGradient id="laptopShell" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#6A6663"/>
+      <stop offset="1" stop-color="#2F3133"/>
+    </linearGradient>
+    <linearGradient id="laptopScreen" x1="514" y1="299" x2="1099" y2="684" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#202528"/>
+      <stop offset="0.52" stop-color="#121517"/>
+      <stop offset="1" stop-color="#324652"/>
+    </linearGradient>
+    <linearGradient id="keyboard" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#BAB8B4"/>
+      <stop offset="1" stop-color="#8E8B88"/>
+    </linearGradient>
+    <radialGradient id="screenGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(791 480) rotate(90) scale(240 320)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmBlur" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(855 210) rotate(90) scale(170 250)">
+      <stop stop-color="#F7E7D9" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#F7E7D9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur6" x="-120" y="-120" width="1840" height="1160" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="blur18" x="-140" y="-140" width="1880" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="320" y="156" width="857" height="654" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#6A4B35" flood-opacity="0.2"/>
+    </filter>
+    <filter id="softShadow" x="0" y="0" width="1600" height="920" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#8A6A56" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="920" fill="url(#bg)"/>
+
+  <g opacity="0.6" filter="url(#blur18)">
+    <circle cx="220" cy="180" r="150" fill="#FFFFFF"/>
+    <circle cx="1280" cy="154" r="168" fill="#F6E7DB"/>
+    <circle cx="1430" cy="520" r="182" fill="#F8ECE2"/>
+    <circle cx="310" cy="570" r="180" fill="#F0E0D2"/>
+  </g>
+
+  <g opacity="0.54" filter="url(#blur6)">
+    <rect x="78" y="0" width="162" height="920" fill="url(#windowGlow)"/>
+    <rect x="260" y="0" width="92" height="920" fill="#D7D7D8" fill-opacity="0.84"/>
+    <rect x="522" y="0" width="76" height="920" fill="#D0D1D4" fill-opacity="0.84"/>
+    <rect x="998" y="0" width="82" height="920" fill="#D0D1D4" fill-opacity="0.84"/>
+    <rect x="1164" y="0" width="154" height="920" fill="url(#windowGlow)"/>
+  </g>
+
+  <g opacity="0.34" filter="url(#blur18)">
+    <rect x="44" y="94" width="260" height="590" rx="34" fill="#F9F5F1"/>
+    <rect x="1238" y="86" width="278" height="610" rx="42" fill="#FAF6F1"/>
+  </g>
+
+  <rect y="612" width="1600" height="308" fill="url(#desk)"/>
+
+  <g opacity="0.84" filter="url(#softShadow)">
+    <rect x="48" y="542" width="112" height="122" rx="28" fill="#FAF6F2"/>
+    <rect x="58" y="588" width="136" height="13" rx="6.5" fill="#D2C5BA"/>
+    <rect x="66" y="610" width="118" height="9" rx="4.5" fill="#E7DBD1"/>
+    <rect x="72" y="632" width="102" height="7" rx="3.5" fill="#EDE2D9"/>
+  </g>
+
+  <g opacity="0.94" filter="url(#softShadow)">
+    <ellipse cx="166" cy="694" rx="88" ry="18" fill="#B2A39A" fill-opacity="0.2"/>
+    <rect x="104" y="596" width="96" height="108" rx="12" fill="#FBF9F5"/>
+    <path d="M200 618C200 606.954 191.046 598 180 598H124C112.954 598 104 606.954 104 618V626H200V618Z" fill="#F1E7DD"/>
+    <path d="M126 598C126 580.327 140.327 566 158 566C175.673 566 190 580.327 190 598H126Z" fill="#FBF9F5"/>
+    <rect x="192" y="612" width="18" height="48" rx="8" fill="#F4E8DE"/>
+  </g>
+
+  <g opacity="0.9" filter="url(#softShadow)">
+    <rect x="272" y="730" width="232" height="34" rx="17" fill="#B0A29A" fill-opacity="0.2"/>
+    <rect x="266" y="690" width="244" height="42" rx="16" fill="#D9DDE2"/>
+    <rect x="280" y="696" width="216" height="30" rx="14" fill="#F4F6F8"/>
+  </g>
+
+  <g opacity="0.94" filter="url(#softShadow)">
+    <rect x="556" y="460" width="78" height="116" rx="22" fill="#FBFBF8"/>
+    <rect x="574" y="430" width="42" height="54" rx="10" fill="#96AF6E"/>
+    <rect x="588" y="398" width="14" height="56" rx="7" fill="#A7926A"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M470 694H1140L1178 725H434L470 694Z" fill="url(#keyboard)"/>
+    <rect x="454" y="666" width="702" height="28" rx="14" fill="#8D8A86"/>
+    <rect x="496" y="232" width="614" height="478" rx="34" fill="url(#laptopShell)"/>
+    <rect x="518" y="254" width="570" height="392" rx="24" fill="url(#laptopScreen)"/>
+    <rect x="518" y="254" width="570" height="392" rx="24" fill="url(#screenGlow)"/>
+    <rect x="536" y="274" width="148" height="244" rx="22" fill="#374047" fill-opacity="0.72"/>
+    <rect x="556" y="302" width="86" height="12" rx="6" fill="#B7A38F"/>
+    <rect x="556" y="330" width="110" height="10" rx="5" fill="#8FA6BA"/>
+    <rect x="556" y="354" width="78" height="10" rx="5" fill="#C1B4A4"/>
+    <rect x="556" y="378" width="118" height="10" rx="5" fill="#D9B489"/>
+    <rect x="556" y="402" width="68" height="10" rx="5" fill="#8EA1C0"/>
+    <rect x="710" y="286" width="342" height="88" rx="20" fill="#EEF0F2" fill-opacity="0.1"/>
+    <rect x="738" y="316" width="116" height="12" rx="6" fill="#E2B98F"/>
+    <rect x="738" y="344" width="206" height="12" rx="6" fill="#AF9E8A"/>
+    <rect x="710" y="396" width="154" height="108" rx="20" fill="#EEF0F2" fill-opacity="0.1"/>
+    <rect x="886" y="396" width="166" height="108" rx="20" fill="#EEF0F2" fill-opacity="0.1"/>
+    <rect x="734" y="428" width="82" height="10" rx="5" fill="#C8B59D"/>
+    <rect x="734" y="452" width="102" height="10" rx="5" fill="#89A0C2"/>
+    <rect x="734" y="476" width="66" height="10" rx="5" fill="#DFB186"/>
+    <rect x="914" y="428" width="88" height="10" rx="5" fill="#D2B08B"/>
+    <rect x="914" y="452" width="74" height="10" rx="5" fill="#8CA1BF"/>
+    <rect x="914" y="476" width="108" height="10" rx="5" fill="#C9B7A1"/>
+    <g opacity="0.9">
+      <rect x="544" y="534" width="504" height="82" rx="20" fill="#152129" fill-opacity="0.44"/>
+      <rect x="566" y="554" width="62" height="8" rx="4" fill="#7F94AA"/>
+      <rect x="566" y="576" width="84" height="8" rx="4" fill="#D5B48E"/>
+      <rect x="566" y="598" width="52" height="8" rx="4" fill="#97A9C1"/>
+      <rect x="656" y="554" width="174" height="8" rx="4" fill="#C3AE95"/>
+      <rect x="656" y="576" width="152" height="8" rx="4" fill="#7B90A8"/>
+      <rect x="656" y="598" width="194" height="8" rx="4" fill="#D4AF84"/>
+      <rect x="876" y="554" width="132" height="8" rx="4" fill="#A99A8B"/>
+      <rect x="876" y="576" width="96" height="8" rx="4" fill="#8EA4C2"/>
+      <rect x="876" y="598" width="124" height="8" rx="4" fill="#C8B29A"/>
+    </g>
+  </g>
+
+  <g opacity="0.88" filter="url(#softShadow)">
+    <rect x="616" y="42" width="236" height="150" rx="28" fill="#EEF0F2" fill-opacity="0.62"/>
+    <rect x="640" y="66" width="188" height="102" rx="18" fill="#FAF7F3"/>
+    <rect x="664" y="92" width="62" height="8" rx="4" fill="#CFB396"/>
+    <rect x="664" y="112" width="116" height="8" rx="4" fill="#C0C9D1"/>
+    <rect x="664" y="132" width="84" height="8" rx="4" fill="#DFC4A7"/>
+    <rect x="664" y="152" width="104" height="8" rx="4" fill="#A9B5C2"/>
+  </g>
+
+  <g opacity="0.88" filter="url(#softShadow)">
+    <path d="M1326 764C1326 753.507 1334.51 745 1345 745H1355C1365.49 745 1374 753.507 1374 764V843H1326V764Z" fill="#DDD5CD"/>
+    <path d="M1292 843H1408C1408 861.778 1392.78 877 1374 877H1326C1307.22 877 1292 861.778 1292 843Z" fill="#C8BDB4"/>
+    <rect x="1337" y="578" width="26" height="174" rx="13" fill="#E6E1DB"/>
+    <ellipse cx="1350" cy="626" rx="28" ry="48" fill="#F5F2EF"/>
+    <ellipse cx="1350" cy="626" rx="16" ry="32" fill="#E5DDD5"/>
+    <ellipse cx="1350" cy="694" rx="28" ry="48" fill="#F5F2EF"/>
+    <ellipse cx="1350" cy="694" rx="16" ry="32" fill="#E5DDD5"/>
+    <ellipse cx="1350" cy="762" rx="28" ry="48" fill="#F5F2EF"/>
+    <ellipse cx="1350" cy="762" rx="16" ry="32" fill="#E5DDD5"/>
+  </g>
+
+  <circle cx="856" cy="210" r="190" fill="url(#warmBlur)" opacity="0.68"/>
+  <rect x="0" y="0" width="1600" height="920" fill="#FFFFFF" fill-opacity="0.2"/>
+</svg>

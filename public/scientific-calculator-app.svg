@@ -1,0 +1,52 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="40" fill="#F4ECE5"/>
+  <rect x="80" y="72" width="1040" height="556" rx="36" fill="url(#bg)"/>
+  <rect x="150" y="130" width="480" height="420" rx="34" fill="#FFF8F2" stroke="#E2C9B7"/>
+  <rect x="185" y="165" width="410" height="92" rx="24" fill="#F4E8DE"/>
+  <text x="515" y="223" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700" fill="#A97852">128.64</text>
+  <g fill="#FCF7F3" stroke="#E6D3C5">
+    <rect x="185" y="290" width="88" height="68" rx="18"/>
+    <rect x="289" y="290" width="88" height="68" rx="18"/>
+    <rect x="393" y="290" width="88" height="68" rx="18"/>
+    <rect x="497" y="290" width="98" height="68" rx="18" fill="#B28864" stroke="#B28864"/>
+    <rect x="185" y="376" width="88" height="68" rx="18"/>
+    <rect x="289" y="376" width="88" height="68" rx="18"/>
+    <rect x="393" y="376" width="88" height="68" rx="18"/>
+    <rect x="497" y="376" width="98" height="68" rx="18" fill="#EBDCCF"/>
+    <rect x="185" y="462" width="192" height="68" rx="18"/>
+    <rect x="393" y="462" width="88" height="68" rx="18"/>
+    <rect x="497" y="462" width="98" height="68" rx="18" fill="#EBDCCF"/>
+  </g>
+  <g fill="#A97852" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">
+    <text x="229" y="333">7</text>
+    <text x="333" y="333">8</text>
+    <text x="437" y="333">9</text>
+    <text x="540" y="333" fill="#FFF8F2">÷</text>
+    <text x="229" y="419">4</text>
+    <text x="333" y="419">5</text>
+    <text x="437" y="419">6</text>
+    <text x="537" y="419">×</text>
+    <text x="229" y="505">0</text>
+    <text x="437" y="505">.</text>
+    <text x="538" y="505">=</text>
+  </g>
+  <rect x="690" y="148" width="350" height="134" rx="30" fill="#FFF8F2" stroke="#E4D0C0"/>
+  <rect x="690" y="308" width="350" height="110" rx="28" fill="#FFF8F2" stroke="#E4D0C0"/>
+  <rect x="690" y="444" width="350" height="110" rx="28" fill="#FFF8F2" stroke="#E4D0C0"/>
+  <text x="726" y="194" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#C1A087">Recent History</text>
+  <text x="726" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#A97852">68 × 1.89</text>
+  <text x="726" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600" fill="#C1A087">= 128.52</text>
+  <text x="726" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#C1A087">Precision Modes</text>
+  <rect x="726" y="368" width="112" height="18" rx="9" fill="#EAD9CB"/>
+  <rect x="726" y="392" width="186" height="18" rx="9" fill="#F2E7DD"/>
+  <text x="726" y="486" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#C1A087">Quick Functions</text>
+  <rect x="726" y="505" width="78" height="18" rx="9" fill="#F2E7DD"/>
+  <rect x="820" y="505" width="86" height="18" rx="9" fill="#EAD9CB"/>
+  <rect x="922" y="505" width="72" height="18" rx="9" fill="#F2E7DD"/>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="72" x2="1120" y2="628" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F0EA"/>
+      <stop offset="1" stop-color="#EEE0D4"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,1039 @@
+html:not(.dark),
+html[data-theme="light"] {
+  --restore-bg: #fffaf6;
+  --restore-bg-soft: #fff7f2;
+  --restore-surface: #fffdfb;
+  --restore-surface-soft: #fcf5ef;
+  --restore-border: rgba(196, 154, 124, 0.16);
+  --restore-border-strong: rgba(176, 137, 104, 0.26);
+  --restore-heading: #2d1810;
+  --restore-heading-soft: #6f4330;
+  --restore-copy: #6e5543;
+  --restore-copy-soft: #7a614f;
+  --restore-accent: #b08968;
+  --restore-accent-soft: #ddb892;
+  --restore-shadow: 0 16px 32px rgba(45, 24, 16, 0.05);
+}
+
+html:not(.dark) body,
+html[data-theme="light"] body {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(221, 184, 146, 0.14), transparent 18%),
+    radial-gradient(circle at 82% 12%, rgba(196, 154, 124, 0.12), transparent 18%),
+    radial-gradient(circle at 50% 78%, rgba(229, 200, 177, 0.24), transparent 24%),
+    var(--restore-bg) !important;
+  color: var(--restore-heading) !important;
+}
+
+html:not(.dark) body::before,
+html[data-theme="light"] body::before {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 18% 16%, rgba(255, 243, 232, 0.44), transparent 24%) !important;
+  opacity: 0.78 !important;
+}
+
+html:not(.dark) .site-shell::after,
+html[data-theme="light"] .site-shell::after {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(235, 211, 193, 0.32), transparent 30%) !important;
+}
+
+html:not(.dark) .hero-section,
+html[data-theme="light"] .hero-section,
+html:not(.dark) .hero-shell,
+html[data-theme="light"] .hero-shell,
+html:not(.dark) .expertise-section,
+html[data-theme="light"] .expertise-section,
+html:not(.dark) .about-section,
+html[data-theme="light"] .about-section,
+html:not(.dark) .featured-projects-section,
+html[data-theme="light"] .featured-projects-section,
+html:not(.dark) .footer-shell,
+html[data-theme="light"] .footer-shell {
+  background: var(--restore-bg) !important;
+}
+
+html:not(.dark) .button-copper,
+html[data-theme="light"] .button-copper {
+  background: linear-gradient(135deg, #8f6f55, #b08968 52%, #ddb892) !important;
+  color: #ffffff !important;
+  box-shadow: 0 16px 28px rgba(144, 102, 69, 0.18) !important;
+}
+
+html:not(.dark) .button-ghost,
+html[data-theme="light"] .button-ghost,
+html:not(.dark) .theme-toggle,
+html[data-theme="light"] .theme-toggle {
+  border-color: rgba(196, 154, 124, 0.16) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #6f4330 !important;
+  box-shadow: 0 10px 20px rgba(45, 24, 16, 0.05) !important;
+}
+
+html:not(.dark) .section-kicker,
+html[data-theme="light"] .section-kicker {
+  border-color: rgba(176, 137, 104, 0.18) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  color: #a87552 !important;
+}
+
+html:not(.dark) .header-frame,
+html[data-theme="light"] .header-frame {
+  border-bottom-color: rgba(196, 154, 124, 0.14) !important;
+  background: rgba(255, 250, 246, 0.96) !important;
+  box-shadow: 0 10px 24px rgba(45, 24, 16, 0.05) !important;
+}
+
+html:not(.dark) .header-mobile-panel,
+html[data-theme="light"] .header-mobile-panel {
+  border-color: rgba(196, 154, 124, 0.14) !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(249, 244, 239, 0.62)) !important;
+  box-shadow: 0 18px 36px rgba(45, 24, 16, 0.06) !important;
+}
+
+html:not(.dark) .brand-mark,
+html[data-theme="light"] .brand-mark,
+html:not(.dark) .brand-title-primary,
+html[data-theme="light"] .brand-title-primary {
+  color: #855c3f !important;
+}
+
+html:not(.dark) .brand-tagline,
+html[data-theme="light"] .brand-tagline {
+  color: #8f6f55 !important;
+}
+
+html:not(.dark) .header-link::after,
+html[data-theme="light"] .header-link::after {
+  background: rgba(176, 137, 104, 0.76) !important;
+}
+
+html:not(.dark) .icon-shell,
+html[data-theme="light"] .icon-shell {
+  border-color: rgba(196, 154, 124, 0.18) !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 241, 235, 0.82)) !important;
+  color: #a87552 !important;
+  box-shadow: 0 12px 24px rgba(45, 24, 16, 0.06) !important;
+}
+
+html:not(.dark) .form-input,
+html[data-theme="light"] .form-input {
+  border-color: rgba(196, 154, 124, 0.16) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #2d1810 !important;
+}
+
+html:not(.dark) .form-input:focus,
+html[data-theme="light"] .form-input:focus {
+  border-color: rgba(176, 137, 104, 0.34) !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(196, 154, 124, 0.12) !important;
+}
+
+html:not(.dark) .hero-scene-image,
+html[data-theme="light"] .hero-scene-image {
+  opacity: 0.9 !important;
+  filter: saturate(0.76) brightness(0.96) contrast(1.02) !important;
+}
+
+html:not(.dark) .hero-scene-haze,
+html[data-theme="light"] .hero-scene-haze {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 248, 242, 0.52), transparent 24%),
+    linear-gradient(
+      180deg,
+      rgba(255, 250, 246, 0.68),
+      rgba(255, 250, 246, 0.56) 16%,
+      rgba(255, 250, 246, 0.28) 42%,
+      rgba(255, 250, 246, 0.24) 68%,
+      rgba(255, 250, 246, 0.5)
+    ) !important;
+}
+
+html:not(.dark) .expertise-scene-haze,
+html[data-theme="light"] .expertise-scene-haze,
+html:not(.dark) .about-scene-haze,
+html[data-theme="light"] .about-scene-haze,
+html:not(.dark) .featured-projects-scene-haze,
+html[data-theme="light"] .featured-projects-scene-haze {
+  background:
+    linear-gradient(180deg, rgba(246, 239, 233, 0.72), rgba(246, 239, 233, 0.92) 24%, rgba(246, 239, 233, 0.98)),
+    radial-gradient(circle at 16% 18%, rgba(188, 148, 114, 0.09), transparent 24%),
+    radial-gradient(circle at 84% 16%, rgba(255, 255, 255, 0.34), transparent 30%) !important;
+}
+
+html:not(.dark) .featured-projects-scene-image,
+html[data-theme="light"] .featured-projects-scene-image {
+  opacity: 0.12 !important;
+  filter: saturate(0.42) brightness(1.02) blur(12px) !important;
+}
+
+html:not(.dark) .glass-panel,
+html[data-theme="light"] .glass-panel,
+html:not(.dark) .glass-panel-strong,
+html[data-theme="light"] .glass-panel-strong,
+html:not(.dark) .soft-card,
+html[data-theme="light"] .soft-card,
+html:not(.dark) .about-card,
+html[data-theme="light"] .about-card,
+html:not(.dark) .expertise-card,
+html[data-theme="light"] .expertise-card,
+html:not(.dark) .hero-secondary-button,
+html[data-theme="light"] .hero-secondary-button,
+html:not(.dark) .hero-stat-card,
+html[data-theme="light"] .hero-stat-card,
+html:not(.dark) .featured-projects-filter-button-inactive,
+html[data-theme="light"] .featured-projects-filter-button-inactive,
+html:not(.dark) .featured-project-card,
+html[data-theme="light"] .featured-project-card,
+html:not(.dark) .featured-project-card-hero,
+html[data-theme="light"] .featured-project-card-hero,
+html:not(.dark) .featured-project-card-content,
+html[data-theme="light"] .featured-project-card-content,
+html:not(.dark) .about-page-overview-shell,
+html[data-theme="light"] .about-page-overview-shell,
+html:not(.dark) .about-page-lead-shell,
+html[data-theme="light"] .about-page-lead-shell,
+html:not(.dark) .about-page-mission-panel,
+html[data-theme="light"] .about-page-mission-panel,
+html:not(.dark) .about-page-story-card,
+html[data-theme="light"] .about-page-story-card,
+html:not(.dark) .about-page-profile-card,
+html[data-theme="light"] .about-page-profile-card,
+html:not(.dark) .about-page-value-card,
+html[data-theme="light"] .about-page-value-card,
+html:not(.dark) .portfolio-page-summary-card,
+html[data-theme="light"] .portfolio-page-summary-card,
+html:not(.dark) .portfolio-page-card,
+html[data-theme="light"] .portfolio-page-card,
+html:not(.dark) .portfolio-page-wide-card,
+html[data-theme="light"] .portfolio-page-wide-card,
+html:not(.dark) .process-shell,
+html[data-theme="light"] .process-shell,
+html:not(.dark) .services-overview-shell,
+html[data-theme="light"] .services-overview-shell,
+html:not(.dark) .services-overview-stat,
+html[data-theme="light"] .services-overview-stat,
+html:not(.dark) .services-overview-panel,
+html[data-theme="light"] .services-overview-panel,
+html:not(.dark) .service-offer,
+html[data-theme="light"] .service-offer,
+html:not(.dark) .services-flow-shell,
+html[data-theme="light"] .services-flow-shell,
+html:not(.dark) .services-flow-step,
+html[data-theme="light"] .services-flow-step,
+html:not(.dark) .footer-panel,
+html[data-theme="light"] .footer-panel,
+html:not(.dark) .footer-cta-link,
+html[data-theme="light"] .footer-cta-link,
+html:not(.dark) .social-icon-chip,
+html[data-theme="light"] .social-icon-chip {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 244, 239, 0.94)) !important;
+  border-color: var(--restore-border) !important;
+  box-shadow: var(--restore-shadow) !important;
+}
+
+html:not(.dark) .featured-projects-filter-button-active,
+html[data-theme="light"] .featured-projects-filter-button-active {
+  background: var(--restore-accent) !important;
+  color: #ffffff !important;
+}
+
+html:not(.dark) .hero-stat-value,
+html[data-theme="light"] .hero-stat-value,
+html:not(.dark) .hero-stat-label,
+html[data-theme="light"] .hero-stat-label {
+  color: #a87552 !important;
+}
+
+html:not(.dark) .hero-copy,
+html[data-theme="light"] .hero-copy {
+  color: #332119 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  text-shadow: 0 1px 0 rgba(255, 250, 246, 0.42) !important;
+}
+
+html:not(.dark) .about-page-cta-shell,
+html[data-theme="light"] .about-page-cta-shell,
+html:not(.dark) .services-cta-shell,
+html[data-theme="light"] .services-cta-shell {
+  border-color: rgba(196, 154, 124, 0.2) !important;
+  background: linear-gradient(135deg, #1a0f0a 0%, #2a1a13 52%, #402d23 100%) !important;
+  box-shadow: 0 24px 42px rgba(26, 15, 10, 0.22) !important;
+}
+
+html:not(.dark) .about-page-cta-kicker,
+html[data-theme="light"] .about-page-cta-kicker,
+html:not(.dark) .services-cta-eyebrow,
+html[data-theme="light"] .services-cta-eyebrow {
+  color: #ddb892 !important;
+}
+
+html:not(.dark) .about-page-cta-title,
+html[data-theme="light"] .about-page-cta-title,
+html:not(.dark) .services-cta-title,
+html[data-theme="light"] .services-cta-title,
+html:not(.dark) .about-page-cta-meta span,
+html[data-theme="light"] .about-page-cta-meta span,
+html:not(.dark) .services-cta-meta span,
+html[data-theme="light"] .services-cta-meta span {
+  color: #fff3e8 !important;
+}
+
+html:not(.dark) .about-page-cta-description,
+html[data-theme="light"] .about-page-cta-description,
+html:not(.dark) .services-cta-description,
+html[data-theme="light"] .services-cta-description {
+  color: #e5c8b1 !important;
+}
+
+html:not(.dark) [class*="text-[#0f2747]"],
+html[data-theme="light"] [class*="text-[#0f2747]"],
+html:not(.dark) [class*="text-[#2d1810]"],
+html[data-theme="light"] [class*="text-[#2d1810]"] {
+  color: var(--restore-heading) !important;
+}
+
+html:not(.dark) [class*="text-[#1f4f96]"],
+html[data-theme="light"] [class*="text-[#1f4f96]"],
+html:not(.dark) [class*="text-[#1c467f]"],
+html[data-theme="light"] [class*="text-[#1c467f]"],
+html:not(.dark) [class*="text-[#855c3f]"],
+html[data-theme="light"] [class*="text-[#855c3f]"] {
+  color: #855c3f !important;
+}
+
+html:not(.dark) [class*="text-[#4c6789]"],
+html[data-theme="light"] [class*="text-[#4c6789]"],
+html:not(.dark) [class*="text-[#435a77]"],
+html[data-theme="light"] [class*="text-[#435a77]"],
+html:not(.dark) [class*="text-[#5b7596]"],
+html[data-theme="light"] [class*="text-[#5b7596]"],
+html:not(.dark) [class*="text-[#735947]"],
+html[data-theme="light"] [class*="text-[#735947]"],
+html:not(.dark) [class*="text-[#6e5543]"],
+html[data-theme="light"] [class*="text-[#6e5543]"],
+html:not(.dark) [class*="text-[#6b5342]"],
+html[data-theme="light"] [class*="text-[#6b5342]"],
+html:not(.dark) [class*="text-[#6d5544]"],
+html[data-theme="light"] [class*="text-[#6d5544]"],
+html:not(.dark) [class*="text-[#785741]"],
+html[data-theme="light"] [class*="text-[#785741]"],
+html:not(.dark) [class*="text-[#7a614f]"],
+html[data-theme="light"] [class*="text-[#7a614f]"] {
+  color: var(--restore-copy) !important;
+}
+
+html:not(.dark) [class*="text-[#2f6fed]"],
+html[data-theme="light"] [class*="text-[#2f6fed]"],
+html:not(.dark) [class*="text-[#4f8df3]"],
+html[data-theme="light"] [class*="text-[#4f8df3]"],
+html:not(.dark) [class*="text-[#b08968]"],
+html[data-theme="light"] [class*="text-[#b08968]"],
+html:not(.dark) [class*="text-[#a87552]"],
+html[data-theme="light"] [class*="text-[#a87552]"],
+html:not(.dark) [class*="text-[#9e775a]"],
+html[data-theme="light"] [class*="text-[#9e775a]"] {
+  color: var(--restore-accent) !important;
+}
+
+html:not(.dark) [class*="border-[#60a5fa]"],
+html[data-theme="light"] [class*="border-[#60a5fa]"],
+html:not(.dark) [class*="border-[#dbeafe]"],
+html[data-theme="light"] [class*="border-[#dbeafe]"] {
+  border-color: var(--restore-border) !important;
+}
+
+html:not(.dark) [class*="bg-[#dbeafe]"],
+html[data-theme="light"] [class*="bg-[#dbeafe]"],
+html:not(.dark) [class*="bg-[#f7fbff]"],
+html[data-theme="light"] [class*="bg-[#f7fbff]"],
+html:not(.dark) [class*="bg-[#eef5ff]"],
+html[data-theme="light"] [class*="bg-[#eef5ff]"] {
+  background: var(--restore-surface-soft) !important;
+}
+
+html:not(.dark) .portfolio-page-accent,
+html[data-theme="light"] .portfolio-page-accent {
+  background: linear-gradient(135deg, #8f6f55 0%, #b08968 52%, #e7cdb8 100%) !important;
+  box-shadow:
+    0 12px 24px rgba(45, 24, 16, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+html:not(.dark) .process-step::before,
+html[data-theme="light"] .process-step::before,
+html:not(.dark) .services-overview-stat::before,
+html[data-theme="light"] .services-overview-stat::before,
+html:not(.dark) .service-offer::before,
+html[data-theme="light"] .service-offer::before,
+html:not(.dark) .footer-panel::before,
+html[data-theme="light"] .footer-panel::before {
+  background: linear-gradient(90deg, #b08968, rgba(196, 154, 124, 0.22)) !important;
+}
+
+html:not(.dark) .portfolio-page-meta-dot,
+html[data-theme="light"] .portfolio-page-meta-dot,
+html:not(.dark) .expertise-bullet-dot,
+html[data-theme="light"] .expertise-bullet-dot,
+html:not(.dark) .services-overview-dot,
+html[data-theme="light"] .services-overview-dot,
+html:not(.dark) .service-offer-dot,
+html[data-theme="light"] .service-offer-dot {
+  background: linear-gradient(135deg, #b08968, #ddb892) !important;
+  box-shadow: 0 0 0 4px rgba(176, 137, 104, 0.1) !important;
+}
+
+html:not(.dark) .footer-hero,
+html[data-theme="light"] .footer-hero,
+html:not(.dark) .footer-bottom,
+html[data-theme="light"] .footer-bottom,
+html:not(.dark) .team-profile-row,
+html[data-theme="light"] .team-profile-row,
+html:not(.dark) .service-offer-copy-shell,
+html[data-theme="light"] .service-offer-copy-shell {
+  border-color: rgba(196, 154, 124, 0.14) !important;
+}
+
+html:not(.dark) .brand-mark,
+html[data-theme="light"] .brand-mark,
+html:not(.dark) .brand-title-primary,
+html[data-theme="light"] .brand-title-primary,
+html:not(.dark) .hero-heading,
+html[data-theme="light"] .hero-heading,
+html:not(.dark) .featured-projects-title,
+html[data-theme="light"] .featured-projects-title,
+html:not(.dark) .featured-project-title,
+html[data-theme="light"] .featured-project-title,
+html:not(.dark) .portfolio-page-title,
+html[data-theme="light"] .portfolio-page-title,
+html:not(.dark) .portfolio-page-summary-value,
+html[data-theme="light"] .portfolio-page-summary-value,
+html:not(.dark) .portfolio-page-card-title,
+html[data-theme="light"] .portfolio-page-card-title,
+html:not(.dark) .about-page-title,
+html[data-theme="light"] .about-page-title,
+html:not(.dark) .about-page-section-title,
+html[data-theme="light"] .about-page-section-title,
+html:not(.dark) .about-page-profile-name,
+html[data-theme="light"] .about-page-profile-name,
+html:not(.dark) .about-page-value-title,
+html[data-theme="light"] .about-page-value-title,
+html:not(.dark) .about-page-cta-title,
+html[data-theme="light"] .about-page-cta-title,
+html:not(.dark) .services-overview-title,
+html[data-theme="light"] .services-overview-title,
+html:not(.dark) .services-section-title,
+html[data-theme="light"] .services-section-title,
+html:not(.dark) .services-flow-title,
+html[data-theme="light"] .services-flow-title,
+html:not(.dark) .services-flow-step-title,
+html[data-theme="light"] .services-flow-step-title,
+html:not(.dark) .process-title,
+html[data-theme="light"] .process-title,
+html:not(.dark) .process-step-title,
+html[data-theme="light"] .process-step-title,
+html:not(.dark) .service-offer-title,
+html[data-theme="light"] .service-offer-title,
+html:not(.dark) .footer-title,
+html[data-theme="light"] .footer-title,
+html:not(.dark) .footer-link-heading,
+html[data-theme="light"] .footer-link-heading {
+  color: var(--restore-heading) !important;
+}
+
+html:not(.dark) .brand-tagline,
+html[data-theme="light"] .brand-tagline,
+html:not(.dark) .featured-projects-description,
+html[data-theme="light"] .featured-projects-description,
+html:not(.dark) .featured-project-copy,
+html[data-theme="light"] .featured-project-copy,
+html:not(.dark) .featured-project-meta,
+html[data-theme="light"] .featured-project-meta,
+html:not(.dark) .featured-project-metric,
+html[data-theme="light"] .featured-project-metric,
+html:not(.dark) .featured-project-tag,
+html[data-theme="light"] .featured-project-tag,
+html:not(.dark) .portfolio-page-summary-label,
+html[data-theme="light"] .portfolio-page-summary-label,
+html:not(.dark) .portfolio-page-description,
+html[data-theme="light"] .portfolio-page-description,
+html:not(.dark) .portfolio-page-card-copy,
+html[data-theme="light"] .portfolio-page-card-copy,
+html:not(.dark) .portfolio-page-meta-item,
+html[data-theme="light"] .portfolio-page-meta-item,
+html:not(.dark) .about-page-description,
+html[data-theme="light"] .about-page-description,
+html:not(.dark) .about-page-section-description,
+html[data-theme="light"] .about-page-section-description,
+html:not(.dark) .about-page-cta-description,
+html[data-theme="light"] .about-page-cta-description,
+html:not(.dark) .about-page-panel-copy,
+html[data-theme="light"] .about-page-panel-copy,
+html:not(.dark) .about-paragraph,
+html[data-theme="light"] .about-paragraph,
+html:not(.dark) .about-page-paragraph,
+html[data-theme="light"] .about-page-paragraph,
+html:not(.dark) .about-page-profile-summary,
+html[data-theme="light"] .about-page-profile-summary,
+html:not(.dark) .about-page-profile-affiliation,
+html[data-theme="light"] .about-page-profile-affiliation,
+html:not(.dark) .about-page-story-copy,
+html[data-theme="light"] .about-page-story-copy,
+html:not(.dark) .about-page-value-copy,
+html[data-theme="light"] .about-page-value-copy,
+html:not(.dark) .services-overview-description,
+html[data-theme="light"] .services-overview-description,
+html:not(.dark) .services-overview-panel-copy,
+html[data-theme="light"] .services-overview-panel-copy,
+html:not(.dark) .services-section-description,
+html[data-theme="light"] .services-section-description,
+html:not(.dark) .services-flow-description,
+html[data-theme="light"] .services-flow-description,
+html:not(.dark) .services-flow-step-copy,
+html[data-theme="light"] .services-flow-step-copy,
+html:not(.dark) .services-overview-item,
+html[data-theme="light"] .services-overview-item,
+html:not(.dark) .service-offer-copy,
+html[data-theme="light"] .service-offer-copy,
+html:not(.dark) .service-offer-item,
+html[data-theme="light"] .service-offer-item,
+html:not(.dark) .process-description,
+html[data-theme="light"] .process-description,
+html:not(.dark) .process-step-copy,
+html[data-theme="light"] .process-step-copy,
+html:not(.dark) .footer-description,
+html[data-theme="light"] .footer-description,
+html:not(.dark) .footer-panel-note,
+html[data-theme="light"] .footer-panel-note,
+html:not(.dark) .footer-link-list,
+html[data-theme="light"] .footer-link-list,
+html:not(.dark) .footer-bottom,
+html[data-theme="light"] .footer-bottom,
+html:not(.dark) .footer-link-anchor,
+html[data-theme="light"] .footer-link-anchor {
+  color: var(--restore-copy) !important;
+}
+
+html:not(.dark) .about-page-kicker,
+html[data-theme="light"] .about-page-kicker,
+html:not(.dark) .about-page-cta-kicker,
+html[data-theme="light"] .about-page-cta-kicker,
+html:not(.dark) .about-page-panel-kicker,
+html[data-theme="light"] .about-page-panel-kicker,
+html:not(.dark) .about-page-story-kicker,
+html[data-theme="light"] .about-page-story-kicker,
+html:not(.dark) .portfolio-page-kicker,
+html[data-theme="light"] .portfolio-page-kicker,
+html:not(.dark) .process-eyebrow,
+html[data-theme="light"] .process-eyebrow,
+html:not(.dark) .services-overview-kicker,
+html[data-theme="light"] .services-overview-kicker,
+html:not(.dark) .services-section-kicker,
+html[data-theme="light"] .services-section-kicker,
+html:not(.dark) .services-flow-kicker,
+html[data-theme="light"] .services-flow-kicker,
+html:not(.dark) .services-cta-eyebrow,
+html[data-theme="light"] .services-cta-eyebrow,
+html:not(.dark) .footer-eyebrow,
+html[data-theme="light"] .footer-eyebrow,
+html:not(.dark) .featured-project-category,
+html[data-theme="light"] .featured-project-category,
+html:not(.dark) .featured-project-note,
+html[data-theme="light"] .featured-project-note,
+html:not(.dark) .contact-form-note,
+html[data-theme="light"] .contact-form-note,
+html:not(.dark) .services-overview-stat-label,
+html[data-theme="light"] .services-overview-stat-label,
+html:not(.dark) .service-offer-eyebrow,
+html[data-theme="light"] .service-offer-eyebrow,
+html:not(.dark) .service-offer-number,
+html[data-theme="light"] .service-offer-number,
+html:not(.dark) .services-flow-step-number,
+html[data-theme="light"] .services-flow-step-number,
+html:not(.dark) .portfolio-page-card-eyebrow,
+html[data-theme="light"] .portfolio-page-card-eyebrow {
+  color: var(--restore-accent) !important;
+}
+
+html:not(.dark) .featured-project-link,
+html[data-theme="light"] .featured-project-link,
+html:not(.dark) .portfolio-page-link,
+html[data-theme="light"] .portfolio-page-link {
+  color: #855c3f !important;
+}
+
+html:not(.dark) .featured-project-link:hover,
+html[data-theme="light"] .featured-project-link:hover,
+html:not(.dark) .featured-project-link:focus-visible,
+html[data-theme="light"] .featured-project-link:focus-visible,
+html:not(.dark) .portfolio-page-link:hover,
+html[data-theme="light"] .portfolio-page-link:hover,
+html:not(.dark) .portfolio-page-link:focus-visible,
+html[data-theme="light"] .portfolio-page-link:focus-visible,
+html:not(.dark) .footer-link-anchor:hover,
+html[data-theme="light"] .footer-link-anchor:hover,
+html:not(.dark) .footer-link-anchor:focus-visible,
+html[data-theme="light"] .footer-link-anchor:focus-visible {
+  color: #6f4330 !important;
+}
+
+html:not(.dark) .text-\[\#855c3f\],
+html[data-theme="light"] .text-\[\#855c3f\],
+html:not(.dark) .text-\[\#2d1810\],
+html[data-theme="light"] .text-\[\#2d1810\] {
+  color: var(--restore-heading) !important;
+}
+
+html:not(.dark) .text-\[\#785741\],
+html[data-theme="light"] .text-\[\#785741\],
+html:not(.dark) .text-\[\#5e4937\],
+html[data-theme="light"] .text-\[\#5e4937\],
+html:not(.dark) .text-\[\#49392f\],
+html[data-theme="light"] .text-\[\#49392f\],
+html:not(.dark) .text-\[\#6c5646\],
+html[data-theme="light"] .text-\[\#6c5646\],
+html:not(.dark) .text-\[\#6e5543\],
+html[data-theme="light"] .text-\[\#6e5543\],
+html:not(.dark) .text-\[\#8f6f55\],
+html[data-theme="light"] .text-\[\#8f6f55\],
+html:not(.dark) .text-\[\#6f4330\],
+html[data-theme="light"] .text-\[\#6f4330\],
+html:not(.dark) .text-\[\#6a5647\],
+html[data-theme="light"] .text-\[\#6a5647\] {
+  color: var(--restore-copy) !important;
+}
+
+html:not(.dark) .text-\[\#b08968\],
+html[data-theme="light"] .text-\[\#b08968\],
+html:not(.dark) .text-\[\#a87552\],
+html[data-theme="light"] .text-\[\#a87552\],
+html:not(.dark) .text-\[\#9e775a\],
+html[data-theme="light"] .text-\[\#9e775a\],
+html:not(.dark) .text-\[\#bc9f8c\],
+html[data-theme="light"] .text-\[\#bc9f8c\] {
+  color: var(--restore-accent) !important;
+}
+
+html:not(.dark) .bg-\[\#1a0f0a\],
+html[data-theme="light"] .bg-\[\#1a0f0a\] {
+  background: linear-gradient(135deg, #1a0f0a 0%, #2a1a13 52%, #402d23 100%) !important;
+}
+
+@media not all {
+html.dark,
+body[data-theme="dark"] {
+  --restore-dark-bg: #120b08;
+  --restore-dark-surface: rgba(38, 24, 17, 0.92);
+  --restore-dark-surface-soft: rgba(31, 20, 14, 0.84);
+  --restore-dark-border: rgba(221, 184, 146, 0.16);
+  --restore-dark-heading: #f6efe9;
+  --restore-dark-copy: #d3b49a;
+  --restore-dark-copy-soft: #dcc6b4;
+  --restore-dark-accent: #ddb892;
+}
+
+html.dark body,
+body[data-theme="dark"] {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(196, 154, 124, 0.1), transparent 18%),
+    radial-gradient(circle at 86% 14%, rgba(176, 137, 104, 0.1), transparent 18%),
+    radial-gradient(circle at 50% 78%, rgba(94, 73, 55, 0.16), transparent 24%),
+    var(--restore-dark-bg) !important;
+  color: var(--restore-dark-heading) !important;
+}
+
+html.dark .site-shell::after,
+body[data-theme="dark"] .site-shell::after {
+  background:
+    radial-gradient(circle at top left, rgba(94, 73, 55, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(18, 11, 8, 0.5), transparent 34%) !important;
+}
+
+html.dark .glass-panel,
+html.dark .glass-panel-strong,
+html.dark .soft-card,
+html.dark .about-card,
+html.dark .expertise-card,
+html.dark .process-shell,
+html.dark .featured-project-card,
+html.dark .portfolio-page-summary-card,
+html.dark .portfolio-page-card,
+html.dark .portfolio-page-wide-card,
+html.dark .about-page-overview-shell,
+html.dark .about-page-lead-shell,
+html.dark .about-page-mission-panel,
+html.dark .about-page-story-card,
+html.dark .about-page-profile-card,
+html.dark .about-page-value-card,
+html.dark .services-overview-shell,
+html.dark .services-flow-shell,
+html.dark .services-flow-step,
+html.dark .services-cta-shell,
+html.dark .footer-panel,
+body[data-theme="dark"] .glass-panel,
+body[data-theme="dark"] .glass-panel-strong,
+body[data-theme="dark"] .soft-card,
+body[data-theme="dark"] .about-card,
+body[data-theme="dark"] .expertise-card,
+body[data-theme="dark"] .process-shell,
+body[data-theme="dark"] .featured-project-card,
+body[data-theme="dark"] .portfolio-page-summary-card,
+body[data-theme="dark"] .portfolio-page-card,
+body[data-theme="dark"] .portfolio-page-wide-card,
+body[data-theme="dark"] .about-page-overview-shell,
+body[data-theme="dark"] .about-page-lead-shell,
+body[data-theme="dark"] .about-page-mission-panel,
+body[data-theme="dark"] .about-page-story-card,
+body[data-theme="dark"] .about-page-profile-card,
+body[data-theme="dark"] .about-page-value-card,
+body[data-theme="dark"] .services-overview-shell,
+body[data-theme="dark"] .services-flow-shell,
+body[data-theme="dark"] .services-flow-step,
+body[data-theme="dark"] .services-cta-shell,
+body[data-theme="dark"] .footer-panel {
+  border-color: var(--restore-dark-border) !important;
+  background: linear-gradient(180deg, var(--restore-dark-surface), var(--restore-dark-surface-soft)) !important;
+  box-shadow:
+    0 22px 42px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+html.dark .header-frame,
+body[data-theme="dark"] .header-frame,
+html.dark .header-mobile-panel,
+body[data-theme="dark"] .header-mobile-panel,
+html.dark .theme-toggle,
+body[data-theme="dark"] .theme-toggle,
+html.dark .button-ghost,
+body[data-theme="dark"] .button-ghost,
+html.dark .footer-cta-link,
+body[data-theme="dark"] .footer-cta-link,
+html.dark .icon-shell,
+body[data-theme="dark"] .icon-shell,
+html.dark .expertise-icon-shell,
+body[data-theme="dark"] .expertise-icon-shell,
+html.dark .pill-chip,
+body[data-theme="dark"] .pill-chip,
+html.dark .featured-project-tag,
+body[data-theme="dark"] .featured-project-tag,
+html.dark .about-page-mission-meta span,
+body[data-theme="dark"] .about-page-mission-meta span,
+html.dark .about-page-cta-meta span,
+body[data-theme="dark"] .about-page-cta-meta span,
+html.dark .services-cta-meta span,
+body[data-theme="dark"] .services-cta-meta span {
+  border-color: var(--restore-dark-border) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--restore-dark-accent) !important;
+}
+
+html.dark .brand-mark,
+html.dark .brand-title-primary,
+html.dark .hero-heading,
+html.dark .featured-projects-title,
+html.dark .featured-project-title,
+html.dark .portfolio-page-title,
+html.dark .portfolio-page-summary-value,
+html.dark .portfolio-page-card-title,
+html.dark .about-page-title,
+html.dark .about-page-section-title,
+html.dark .about-page-profile-name,
+html.dark .about-page-value-title,
+html.dark .about-page-cta-title,
+html.dark .services-overview-title,
+html.dark .services-section-title,
+html.dark .services-flow-title,
+html.dark .services-flow-step-title,
+html.dark .process-title,
+html.dark .process-step-title,
+html.dark .service-offer-title,
+html.dark .footer-title,
+html.dark .footer-link-heading,
+body[data-theme="dark"] .brand-mark,
+body[data-theme="dark"] .brand-title-primary,
+body[data-theme="dark"] .hero-heading,
+body[data-theme="dark"] .featured-projects-title,
+body[data-theme="dark"] .featured-project-title,
+body[data-theme="dark"] .portfolio-page-title,
+body[data-theme="dark"] .portfolio-page-summary-value,
+body[data-theme="dark"] .portfolio-page-card-title,
+body[data-theme="dark"] .about-page-title,
+body[data-theme="dark"] .about-page-section-title,
+body[data-theme="dark"] .about-page-profile-name,
+body[data-theme="dark"] .about-page-value-title,
+body[data-theme="dark"] .about-page-cta-title,
+body[data-theme="dark"] .services-overview-title,
+body[data-theme="dark"] .services-section-title,
+body[data-theme="dark"] .services-flow-title,
+body[data-theme="dark"] .services-flow-step-title,
+body[data-theme="dark"] .process-title,
+body[data-theme="dark"] .process-step-title,
+body[data-theme="dark"] .service-offer-title,
+body[data-theme="dark"] .footer-title,
+body[data-theme="dark"] .footer-link-heading {
+  color: var(--restore-dark-heading) !important;
+}
+
+html.dark .brand-tagline,
+html.dark .featured-projects-description,
+html.dark .featured-project-copy,
+html.dark .featured-project-meta,
+html.dark .featured-project-metric,
+html.dark .portfolio-page-summary-label,
+html.dark .portfolio-page-description,
+html.dark .portfolio-page-card-copy,
+html.dark .portfolio-page-meta-item,
+html.dark .about-page-description,
+html.dark .about-page-section-description,
+html.dark .about-page-cta-description,
+html.dark .about-page-panel-copy,
+html.dark .about-page-paragraph,
+html.dark .about-page-profile-summary,
+html.dark .about-page-profile-affiliation,
+html.dark .about-page-story-copy,
+html.dark .about-page-value-copy,
+html.dark .services-overview-description,
+html.dark .services-overview-panel-copy,
+html.dark .services-section-description,
+html.dark .services-flow-description,
+html.dark .services-flow-step-copy,
+html.dark .services-overview-item,
+html.dark .service-offer-copy,
+html.dark .service-offer-item,
+html.dark .process-description,
+html.dark .process-step-copy,
+html.dark .footer-description,
+html.dark .footer-panel-note,
+html.dark .footer-link-list,
+html.dark .footer-bottom,
+html.dark .footer-link-anchor,
+body[data-theme="dark"] .brand-tagline,
+body[data-theme="dark"] .featured-projects-description,
+body[data-theme="dark"] .featured-project-copy,
+body[data-theme="dark"] .featured-project-meta,
+body[data-theme="dark"] .featured-project-metric,
+body[data-theme="dark"] .portfolio-page-summary-label,
+body[data-theme="dark"] .portfolio-page-description,
+body[data-theme="dark"] .portfolio-page-card-copy,
+body[data-theme="dark"] .portfolio-page-meta-item,
+body[data-theme="dark"] .about-page-description,
+body[data-theme="dark"] .about-page-section-description,
+body[data-theme="dark"] .about-page-cta-description,
+body[data-theme="dark"] .about-page-panel-copy,
+body[data-theme="dark"] .about-page-paragraph,
+body[data-theme="dark"] .about-page-profile-summary,
+body[data-theme="dark"] .about-page-profile-affiliation,
+body[data-theme="dark"] .about-page-story-copy,
+body[data-theme="dark"] .about-page-value-copy,
+body[data-theme="dark"] .services-overview-description,
+body[data-theme="dark"] .services-overview-panel-copy,
+body[data-theme="dark"] .services-section-description,
+body[data-theme="dark"] .services-flow-description,
+body[data-theme="dark"] .services-flow-step-copy,
+body[data-theme="dark"] .services-overview-item,
+body[data-theme="dark"] .service-offer-copy,
+body[data-theme="dark"] .service-offer-item,
+body[data-theme="dark"] .process-description,
+body[data-theme="dark"] .process-step-copy,
+body[data-theme="dark"] .footer-description,
+body[data-theme="dark"] .footer-panel-note,
+body[data-theme="dark"] .footer-link-list,
+body[data-theme="dark"] .footer-bottom,
+body[data-theme="dark"] .footer-link-anchor {
+  color: var(--restore-dark-copy) !important;
+}
+
+html.dark .about-page-kicker,
+html.dark .section-kicker,
+html.dark .about-page-cta-kicker,
+html.dark .about-page-panel-kicker,
+html.dark .about-page-story-kicker,
+html.dark .portfolio-page-kicker,
+html.dark .process-eyebrow,
+html.dark .services-overview-kicker,
+html.dark .services-section-kicker,
+html.dark .services-overview-panel-kicker,
+html.dark .services-flow-kicker,
+html.dark .services-cta-eyebrow,
+html.dark .footer-eyebrow,
+html.dark .featured-project-category,
+html.dark .featured-project-note,
+html.dark .contact-form-note,
+html.dark .services-overview-stat-label,
+html.dark .service-offer-eyebrow,
+html.dark .service-offer-number,
+html.dark .process-step-number,
+html.dark .services-flow-step-number,
+html.dark .portfolio-page-card-eyebrow,
+body[data-theme="dark"] .about-page-kicker,
+body[data-theme="dark"] .section-kicker,
+body[data-theme="dark"] .about-page-cta-kicker,
+body[data-theme="dark"] .about-page-panel-kicker,
+body[data-theme="dark"] .about-page-story-kicker,
+body[data-theme="dark"] .portfolio-page-kicker,
+body[data-theme="dark"] .process-eyebrow,
+body[data-theme="dark"] .services-overview-kicker,
+body[data-theme="dark"] .services-section-kicker,
+body[data-theme="dark"] .services-overview-panel-kicker,
+body[data-theme="dark"] .services-flow-kicker,
+body[data-theme="dark"] .services-cta-eyebrow,
+body[data-theme="dark"] .footer-eyebrow,
+body[data-theme="dark"] .featured-project-category,
+body[data-theme="dark"] .featured-project-note,
+body[data-theme="dark"] .contact-form-note,
+body[data-theme="dark"] .services-overview-stat-label,
+body[data-theme="dark"] .service-offer-eyebrow,
+body[data-theme="dark"] .service-offer-number,
+body[data-theme="dark"] .process-step-number,
+body[data-theme="dark"] .services-flow-step-number,
+body[data-theme="dark"] .portfolio-page-card-eyebrow {
+  color: var(--restore-dark-accent) !important;
+}
+
+html.dark .site-shell .contact-form-note,
+body[data-theme="dark"] .site-shell .contact-form-note {
+  color: var(--restore-dark-accent) !important;
+}
+
+html.dark .button-copper,
+body[data-theme="dark"] .button-copper {
+  background: linear-gradient(135deg, #8f6f55, #b08968 52%, #ddb892) !important;
+  color: #ffffff !important;
+  box-shadow: 0 20px 34px rgba(111, 67, 48, 0.28) !important;
+}
+
+html.dark .featured-projects-filter-button-active,
+body[data-theme="dark"] .featured-projects-filter-button-active {
+  background: #8f6f55 !important;
+  color: #fffaf6 !important;
+}
+
+html.dark .featured-projects-filter-button-inactive,
+body[data-theme="dark"] .featured-projects-filter-button-inactive {
+  border-color: var(--restore-dark-border) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: var(--restore-dark-copy) !important;
+}
+
+html.dark .text-\[\#2d1810\],
+body[data-theme="dark"] .text-\[\#2d1810\] {
+  color: var(--restore-dark-heading) !important;
+}
+
+html.dark .text-\[\#785741\],
+html.dark .text-\[\#5e4937\],
+html.dark .text-\[\#49392f\],
+html.dark .text-\[\#6c5646\],
+html.dark .text-\[\#6e5543\],
+html.dark .text-\[\#8f6f55\],
+html.dark .text-\[\#6f4330\],
+html.dark .text-\[\#6a5647\],
+body[data-theme="dark"] .text-\[\#785741\],
+body[data-theme="dark"] .text-\[\#5e4937\],
+body[data-theme="dark"] .text-\[\#49392f\],
+body[data-theme="dark"] .text-\[\#6c5646\],
+body[data-theme="dark"] .text-\[\#6e5543\],
+body[data-theme="dark"] .text-\[\#8f6f55\],
+body[data-theme="dark"] .text-\[\#6f4330\],
+body[data-theme="dark"] .text-\[\#6a5647\] {
+  color: var(--restore-dark-copy) !important;
+}
+
+html.dark .text-\[\#b08968\],
+html.dark .text-\[\#a87552\],
+html.dark .text-\[\#9e775a\],
+html.dark .text-\[\#bc9f8c\],
+body[data-theme="dark"] .text-\[\#b08968\],
+body[data-theme="dark"] .text-\[\#a87552\],
+body[data-theme="dark"] .text-\[\#9e775a\],
+body[data-theme="dark"] .text-\[\#bc9f8c\] {
+  color: var(--restore-dark-accent) !important;
+}
+
+html.dark .bg-\[\#1a0f0a\],
+body[data-theme="dark"] .bg-\[\#1a0f0a\] {
+  background: linear-gradient(135deg, #1a0f0a 0%, #2a1a13 52%, #402d23 100%) !important;
+}
+
+html.dark .bg-white\/70,
+body[data-theme="dark"] .bg-white\/70 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+html.dark .border-\[\#c49a7c\]\/15,
+body[data-theme="dark"] .border-\[\#c49a7c\]\/15 {
+  border-color: rgba(221, 184, 146, 0.16) !important;
+}
+
+html.dark .border-\[\#c49a7c\]\/25,
+body[data-theme="dark"] .border-\[\#c49a7c\]\/25 {
+  border-color: rgba(221, 184, 146, 0.22) !important;
+}
+
+html.dark .bg-\[\#c49a7c\]\/10,
+body[data-theme="dark"] .bg-\[\#c49a7c\]\/10 {
+  background-color: rgba(221, 184, 146, 0.1) !important;
+}
+
+html.dark .featured-project-link,
+html.dark .portfolio-page-link,
+body[data-theme="dark"] .featured-project-link,
+body[data-theme="dark"] .portfolio-page-link {
+  color: #f0d0b0 !important;
+}
+
+html.dark .featured-project-link:hover,
+html.dark .featured-project-link:focus-visible,
+html.dark .portfolio-page-link:hover,
+html.dark .portfolio-page-link:focus-visible,
+html.dark .footer-link-anchor:hover,
+html.dark .footer-link-anchor:focus-visible,
+body[data-theme="dark"] .featured-project-link:hover,
+body[data-theme="dark"] .featured-project-link:focus-visible,
+body[data-theme="dark"] .portfolio-page-link:hover,
+body[data-theme="dark"] .portfolio-page-link:focus-visible,
+body[data-theme="dark"] .footer-link-anchor:hover,
+body[data-theme="dark"] .footer-link-anchor:focus-visible {
+  color: #fff3e8 !important;
+}
+}
+
+.button-copper {
+  background: linear-gradient(135deg, #8f6f55 0%, #b08968 52%, #ddb892 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(143, 111, 85, 0.36) !important;
+  box-shadow: 0 18px 32px rgba(111, 67, 48, 0.2) !important;
+}
+
+.button-copper:hover,
+.button-copper:focus-visible {
+  background: linear-gradient(135deg, #7a614f 0%, #a97f60 52%, #d8b59a 100%) !important;
+  color: #ffffff !important;
+}
+
+.services-cta-button {
+  background: linear-gradient(135deg, #8f6f55 0%, #b08968 52%, #ddb892 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(143, 111, 85, 0.36) !important;
+  box-shadow: 0 18px 32px rgba(111, 67, 48, 0.2) !important;
+}
+
+.services-cta-button:hover,
+.services-cta-button:focus-visible {
+  background: linear-gradient(135deg, #7a614f 0%, #a97f60 52%, #d8b59a 100%) !important;
+  color: #ffffff !important;
+}
+
+.header-link::after {
+  background: linear-gradient(90deg, #b08968, #ddb892) !important;
+  box-shadow: 0 0 0 4px rgba(176, 137, 104, 0.1) !important;
+}

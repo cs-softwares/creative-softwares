@@ -1,0 +1,36 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="40" fill="#F4ECE5"/>
+  <rect x="84" y="84" width="1032" height="532" rx="38" fill="url(#bg)"/>
+  <rect x="138" y="132" width="924" height="436" rx="34" fill="#FFF8F2" stroke="#E5D2C3"/>
+  <rect x="176" y="170" width="220" height="98" rx="24" fill="#FCF7F3" stroke="#E8D7C9"/>
+  <rect x="420" y="170" width="220" height="98" rx="24" fill="#FCF7F3" stroke="#E8D7C9"/>
+  <rect x="664" y="170" width="360" height="98" rx="24" fill="#B28864"/>
+  <rect x="176" y="294" width="472" height="234" rx="28" fill="#FCF7F3" stroke="#E8D7C9"/>
+  <rect x="676" y="294" width="348" height="234" rx="28" fill="#FCF7F3" stroke="#E8D7C9"/>
+  <text x="206" y="208" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#BE9C82">Revenue</text>
+  <text x="206" y="244" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#A97852">$28.4K</text>
+  <text x="450" y="208" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#BE9C82">Retention</text>
+  <text x="450" y="244" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#A97852">87%</text>
+  <text x="698" y="208" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#F9EEE5">Insights</text>
+  <rect x="698" y="226" width="112" height="14" rx="7" fill="#E9D9CB"/>
+  <rect x="698" y="248" width="148" height="14" rx="7" fill="#F4E9E0"/>
+  <path d="M212 462V362" stroke="#DCC3B2" stroke-width="20" stroke-linecap="round"/>
+  <path d="M278 462V330" stroke="#EAD9CB" stroke-width="20" stroke-linecap="round"/>
+  <path d="M344 462V388" stroke="#DCC3B2" stroke-width="20" stroke-linecap="round"/>
+  <path d="M410 462V286" stroke="#B28864" stroke-width="20" stroke-linecap="round"/>
+  <path d="M476 462V346" stroke="#DCC3B2" stroke-width="20" stroke-linecap="round"/>
+  <path d="M542 462V314" stroke="#EAD9CB" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="760" cy="404" r="74" fill="#F3E8DE"/>
+  <circle cx="760" cy="404" r="50" fill="#FFF8F2"/>
+  <path d="M760 330A74 74 0 0 1 826 444" stroke="#B28864" stroke-width="18" stroke-linecap="round"/>
+  <path d="M826 444A74 74 0 0 1 708 450" stroke="#E7D2C1" stroke-width="18" stroke-linecap="round"/>
+  <rect x="860" y="358" width="118" height="16" rx="8" fill="#E9D9CB"/>
+  <rect x="860" y="388" width="92" height="16" rx="8" fill="#F2E7DE"/>
+  <rect x="860" y="418" width="134" height="16" rx="8" fill="#E9D9CB"/>
+  <defs>
+    <linearGradient id="bg" x1="84" y1="84" x2="1116" y2="616" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F1EB"/>
+      <stop offset="1" stop-color="#EDDFD2"/>
+    </linearGradient>
+  </defs>
+</svg>
