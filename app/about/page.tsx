@@ -37,8 +37,8 @@ export default function AboutPage() {
               The people behind Creative Softwares.
             </h2>
             <p className="mt-4 text-[0.98rem] leading-7 text-[#6e5543] sm:text-[1.04rem]">
-              Sneha Shankhwar leads the work, with guidance from Abhishek Kumar Kamal to keep
-              product decisions clear and execution steady.
+              Sneha Shankhwar founded and primarily manages the brand. Abhishek Kumar Kamal
+              supports it in an advisory and operational capacity.
             </p>
           </div>
 
@@ -71,17 +71,11 @@ export default function AboutPage() {
                 </div>
 
                 <div className="mt-6">
-                  <p className="text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-[#a87552]">
-                    {profile.label}
-                  </p>
                   <h3 className="mt-3 text-[1.48rem] font-semibold tracking-[-0.04em] text-[#2d1810]">
                     {profile.name}
                   </h3>
                   <p className="mt-2 text-[0.82rem] font-semibold uppercase tracking-[0.18em] text-[#8d6548]">
                     {profile.role}
-                  </p>
-                  <p className="mt-2 text-[0.95rem] font-medium text-[#6e5543]">
-                    {profile.affiliation}
                   </p>
                   <p className="mt-4 text-[0.98rem] leading-7 text-[#6e5543]">
                     {profile.summary}

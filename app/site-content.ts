@@ -60,10 +60,8 @@ export type ProcessStep = {
 };
 
 export type TeamProfile = {
-  label: string;
   name: string;
   role: string;
-  affiliation: string;
   summary: string;
   imageSrc?: string;
   initials?: string;
@@ -74,7 +72,7 @@ export const siteConfig = {
   shortName: "CS",
   title: "Creative Softwares | Android Apps, Websites, and Custom Software",
   description:
-    "Creative Softwares builds Android apps, business websites, and focused client software from India. The portfolio includes CalcQuick, DSA Academy: Coding Prep, and MotivationBooster on Google Play.",
+    "Creative Softwares is an independent software development brand founded and managed by Sneha Shankhwar in India, building Android apps, websites, and practical software products.",
   email: "creativesoftwares96@gmail.com",
   phone: "+919548488443",
   phoneDisplay: "+91 95484 88443",
@@ -147,30 +145,32 @@ export const expertiseServices: ExpertiseCard[] = [
 
 export const teamProfiles: TeamProfile[] = [
   {
-    label: "Founder",
     name: "Sneha Shankhwar",
-    role: "Software Engineer",
-    affiliation: "NIT Hamirpur",
+    role: "Founder & Developer",
     summary:
-      "Focused on practical product delivery and clear software execution.",
+      "Founded and primarily manages Creative Softwares, leading product development and software delivery.",
     imageSrc: "/founder-photo.jpeg",
   },
   {
-    label: "Mentor",
     name: "Abhishek Kumar Kamal",
-    role: "Sr. Software Engineer II",
-    affiliation: "IIT Delhi",
+    role: "Advisor / Support",
     summary:
-      "Brings senior engineering perspective and steady technical guidance.",
+      "Supports Creative Softwares in an advisory and operational capacity and operates the verified Google Play developer account used to publish our Android apps.",
     initials: "AK",
   },
 ];
 
 export const aboutParagraphs = [
-  "Creative Softwares is an independent software brand shaped by Sneha Shankhwar, bringing together product focus, thoughtful execution, and a steady engineering mindset.",
-  "The foundation behind the work is simple: clear communication, dependable build quality, and a practical approach that keeps projects understandable from start to launch.",
-  "With support from trusted mentorship and a strong learning background, the goal is to keep building software that feels useful, credible, and easy to trust.",
+  "Creative Softwares is an independent software development brand founded and managed by Sneha Shankhwar. We build and maintain mobile applications and software products focused on practical user needs.",
+  "Abhishek Kumar Kamal supports Creative Softwares in an advisory and operational capacity. Our Android applications are published through the Google Play developer account operated and verified under Abhishek Kumar Kamal.",
+  "The work is guided by clear communication, dependable build quality, and a practical approach from planning through release.",
 ];
+
+export const appPublishingNote =
+  "Our owned Android applications are developed and maintained under the Creative Softwares brand and distributed through our verified Google Play developer account, operated under Abhishek Kumar Kamal. Client deliveries may be published through the client’s own developer account.";
+
+export const independenceDisclosure =
+  "Creative Softwares is an independent software development brand. References to third-party platforms or trademarks are for identification purposes only and do not imply endorsement or affiliation.";
 
 export const missionStatement = {
   title: "Mission",
@@ -219,12 +219,12 @@ export const featuredProjects: FeaturedProject[] = [
     category: "Owned Product",
     title: "DSA Academy: Coding Prep",
     description:
-      "A coding-prep app designed around DSA topics, problem-solving flow, and concept review for students and interview preparation.",
-    tags: ["DSA prep", "Coding practice", "Learning app"],
+      "A mobile learning app with clear DSA explanations, coding practice in Python, Java, and C++, interview questions, quizzes, and progress tracking.",
+    tags: ["DSA learning", "Mobile coding practice", "Quizzes"],
     accent: "from-[#6f4330] via-[#8f6f55] to-[#ddb892]",
     imageSrc: "/dsa-learning-app.svg",
-    metric: "10+ downloads",
-    release: "Updated 3 Jul 2026",
+    metric: "50+ downloads",
+    release: "Updated 2 Aug 2026",
     platform: "Google Play",
     href: "https://play.google.com/store/apps/details?id=com.dsaacademy.codingprep",
     linkLabel: "View on Play Store",
@@ -373,19 +373,19 @@ export const projects: ProjectCard[] = [
     eyebrow: "OWNED APP",
     title: "DSA Academy: Coding Prep",
     description:
-      "A coding-prep product focused on DSA topics, concept review, and practice-oriented learning for interview preparation.",
+      "A mobile learning app with clear DSA explanations, coding practice in Python, Java, and C++, interview questions, quizzes, and progress tracking.",
     tags: ["Learning app", "Android", "Google Play"],
     accent: "from-[#5e3a28] via-[#8f6f55] to-[#ddb892]",
     href: "https://play.google.com/store/apps/details?id=com.dsaacademy.codingprep",
     linkLabel: "Open on Play Store",
-    details: ["10+ downloads", "Updated July 2026", "Interview-focused content"],
+    details: ["50+ downloads", "Updated August 2026", "Questions, quizzes, and progress tracking"],
   },
   {
     eyebrow: "BUSINESS WEBSITE",
     title: "Creative Softwares Website",
     description:
       "The current studio website built to present published apps, services, and contact information through a clean responsive layout.",
-    tags: ["Next.js 16", "Responsive", "Company site"],
+    tags: ["Next.js 16", "Responsive", "Brand website"],
     accent: "from-[#f7ede5] via-[#e7cdb8] to-[#b08968]",
     href: "/",
     linkLabel: "View website",
@@ -426,7 +426,8 @@ export const footerGroups = [
     links: [
       { href: `mailto:${siteConfig.email}`, label: siteConfig.email },
       { href: `tel:${siteConfig.phone}`, label: siteConfig.phoneDisplay },
-      { href: "/contact", label: siteConfig.location },
+      { href: "/contact", label: "Contact page" },
+      { href: "/contact", label: "India" },
     ],
   },
 ];

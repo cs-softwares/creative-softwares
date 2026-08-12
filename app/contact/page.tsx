@@ -16,12 +16,22 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Let's talk about the next build."
-        description="Reach out if you need an Android app, a business website, or a focused software project that should be scoped and launched clearly."
+        description="Contact Creative Softwares, an independent software development brand based in India, about an Android app, website, or focused software project."
       />
 
       <section className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="space-y-5">
+            <div className="glass-panel rounded-[1.8rem] p-6">
+              <p className="text-sm uppercase tracking-[0.25em] text-[#a87552]">
+                Business information
+              </p>
+              <dl className="mt-4 grid gap-3 text-[#6e5543]">
+                <div><dt className="font-semibold text-[#2d1810]">Brand name</dt><dd>{siteConfig.name}</dd></div>
+                <div><dt className="font-semibold text-[#2d1810]">Country</dt><dd>India</dd></div>
+                <div><dt className="font-semibold text-[#2d1810]">Contact email</dt><dd><a href={`mailto:${siteConfig.email}`} className="break-all">{siteConfig.email}</a></dd></div>
+              </dl>
+            </div>
             <div className="glass-panel-strong rounded-[2rem] p-8">
               <p className="text-sm uppercase tracking-[0.3em] text-[#a87552]">
                 Availability

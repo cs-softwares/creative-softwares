@@ -7,6 +7,7 @@ import { ArrowUpRightIcon } from "./SiteIcons";
 import {
   featuredProjectFilters,
   featuredProjects,
+  appPublishingNote,
   type FeaturedProjectFilter,
 } from "../site-content";
 
@@ -37,6 +38,9 @@ export default function FeaturedProjectsSection() {
           <p className="featured-projects-description">
             These are the live Android products currently tied to Creative Softwares,
             including two owned apps and one client delivery published on Google Play.
+          </p>
+          <p className="featured-projects-description mt-3 text-sm">
+            {appPublishingNote}
           </p>
         </div>
 

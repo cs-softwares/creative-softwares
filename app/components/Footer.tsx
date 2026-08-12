@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { footerGroups, siteConfig } from "../site-content";
+import { footerGroups, independenceDisclosure, siteConfig } from "../site-content";
 import { ArrowUpRightIcon } from "./SiteIcons";
 
 export default function Footer() {
@@ -65,9 +65,10 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-          </p>
+          <div>
+            <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+            <p className="mt-2 max-w-3xl text-sm leading-6">{independenceDisclosure}</p>
+          </div>
           <p>{siteConfig.availability}</p>
         </div>
       </div>

@@ -74,5 +74,5 @@ app/
 ## Contact
 
 For inquiries or collaborations:
-- Email: info@creativesoftware.com
+- Email: creativesoftwares96@gmail.com
 - Phone: +1 (123) 456-7890

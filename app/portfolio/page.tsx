@@ -3,12 +3,12 @@ import Link from "next/link";
 
 import PageHero from "../components/PageHero";
 import { ArrowUpRightIcon } from "../components/SiteIcons";
-import { projects } from "../site-content";
+import { appPublishingNote, projects } from "../site-content";
 
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Browse real Creative Softwares work across published Google Play apps, client delivery, and the current company website.",
+    "Browse Creative Softwares products across published Google Play apps, client delivery, and the brand website.",
 };
 
 const portfolioStats = [
@@ -26,7 +26,7 @@ export default function PortfolioPage() {
       <PageHero
         variant="plain"
         title="Real work already shipped through Creative Softwares."
-        description="Published Android apps, client delivery, and the current company website presented through a cleaner view of the work."
+        description="Published Android apps, client delivery, and the current brand website presented through a clear view of the work."
       />
 
       <section className="px-4 pb-6 pt-3 sm:px-6 lg:px-8">
@@ -51,6 +51,7 @@ export default function PortfolioPage() {
               Owned products and one client delivery, shown in a simpler layout with the
               essential project details kept clear.
             </p>
+            <p className="portfolio-page-description mt-3 text-sm">{appPublishingNote}</p>
           </div>
 
           <div className="portfolio-page-grid mt-10">
@@ -109,7 +110,7 @@ export default function PortfolioPage() {
               <h2 className="portfolio-page-title">The current brand website is part of the portfolio too.</h2>
               <p className="portfolio-page-description">
                 This site is also a shipped project, built to present services, published apps,
-                and contact flow through a responsive company website.
+                and contact flow through a responsive brand website.
               </p>
             </div>
 
